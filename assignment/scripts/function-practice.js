@@ -75,7 +75,7 @@ console.log( 'Test getLast - Should say "dessert":', getLast(['vegetables', 'mea
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  for (item of array){
+  for (let item of array){
     if (item === value){
       return true;
     }
@@ -91,7 +91,7 @@ console.log( 'Test find - Should say "true":', find('bread', ['meat', 'dessert',
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  for (x of string){
+  for (let x of string){
     if (x === letter){
       return true;
     }
@@ -107,7 +107,7 @@ console.log( 'Test isFirstLetter - should say "true":', isFirstLetter('t', 'tele
 function sumAll( array ) {
   let sum = 0
   // TODO: loop to add items
-  for (nums of array){
+  for (let nums of array){
     sum += nums;
   }
   return sum;
@@ -119,15 +119,15 @@ console.log( 'Test sumAll - Should say "45":', sumAll([10, 10, 10, 8, 2, 5]));
 //     return an empty array. Note: The input array should not change.
 function posNums( array ){
   let Nums = [];
-  for (posNum of array){
+  for (let posNum of array){
     if (posNum > 0){
       Nums.push(posNum);
     }
   }
   return Nums;
 }
-console.log( 'Test posNums - Should say "[]":', posNums([-2,-4,0,0,-54]));
-console.log( 'Test posNums - Should say "[1, 3, 5]":', posNums([-2, 1, -4, 0, 3, 5, 0, -54, -3]));
+console.log( 'Test posNums - Should return "[]":', posNums([-2,-4,0,0,-54]));
+console.log( 'Test posNums - Should return 1, 3, and 5:', posNums([-2, 1, -4, 0, 3, 5, 0, -54, -3]));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
